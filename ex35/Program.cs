@@ -52,16 +52,12 @@ namespace ex35
             Console.Write("Введите ваши ФИО: ");
             string name = Console.ReadLine().ToUpper();
 
-            foreach (var names in dossiers)
+            if (dossiers.ContainsKey(name))
             {
-                if (name == names.Key)
-                {
-                    isFound = false;
-                    Console.WriteLine("Досье с такими ФИО уже существует...");
-                    break;
-                }
+                isFound = false;
+                Console.WriteLine("Досье с такими ФИО уже существует...");
             }
-            if (isFound)
+            else
             {
                 Console.Write("Введите вашу должность: ");
                 string post = Console.ReadLine().ToUpper();
