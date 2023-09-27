@@ -47,14 +47,12 @@ namespace ex35
 
         static void AddDossier(Dictionary<string, string> dossiers)
         {
-            bool isFound = true;
             Console.Clear();
             Console.Write("Введите ваши ФИО: ");
             string name = Console.ReadLine().ToUpper();
 
             if (dossiers.ContainsKey(name))
             {
-                isFound = false;
                 Console.WriteLine("Досье с такими ФИО уже существует...");
             }
             else
